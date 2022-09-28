@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="ceshi">
+    hello world
   </div>
 </template>
 
@@ -8,5 +9,7 @@
 </script>
 
 <style scoped lang="scss">
-
+.ceshi {
+  font-size: 1rem;
+}
 </style>
