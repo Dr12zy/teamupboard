@@ -1,14 +1,19 @@
 <template>
-        <router-view />
+    <router-view></router-view>
 </template>
 
 <script setup>
-
 </script>
 
-<style scoped lang="scss">
-body{
+<style>
+* {
+    margin: 0;
     padding: 0;
-    border: 0;
+    /* object-fit: fill; */
+}
+
+html,body,#app {
+    width: 100%;
+    height: 100%;
 }
 </style>

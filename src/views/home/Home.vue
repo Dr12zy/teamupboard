@@ -41,6 +41,9 @@
       <div class="ContainerLeftBottom">
         <button>更多tag</button>
       </div>
+      <div class="ContainerLeftDeep">
+        <Rankings></Rankings>
+      </div>
     </div>
     <div class="ContainerMiddle">
       <div class="ContainerMiddleTop">
@@ -57,7 +60,7 @@
         </div>
       </div>
       <div class="ContainerMiddleBottom">
-        <div class="BottomItem" v-for="(item, i) in 10" :key="i">
+        <div class="BottomItem" v-for="(item, i) in 20" :key="i">
           <Msg :msgitems="item"></Msg>
         </div>
 
@@ -70,24 +73,26 @@
 </template>
 
 <script setup>
-// import { ref } from 'vue';
+// import { ref, reactive } from 'vue';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import {
   Search,
 } from '@element-plus/icons-vue';
 import Msg from '../../components/Msg.vue';
-
+import Rankings from '../../components/Rankings.vue';
 // let msgitems = ref('');
 </script>
 
 <style scoped lang="scss">
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
 .Container {
+  overflow: hidden;
   width: 100%;
+  height: 100%;
   background-color: #FFE76F;
   display: flex;
 
@@ -157,6 +162,10 @@ import Msg from '../../components/Msg.vue';
         margin-left: 70%;
       }
     }
+
+    .ContainerLeftDeep {
+      margin-left: 20px;
+    }
   }
 
   .ContainerMiddle {
@@ -200,18 +209,27 @@ import Msg from '../../components/Msg.vue';
     }
 
     .ContainerMiddleBottom {
+      overflow-y: scroll;
+      overflow-x: hidden;
       padding-left: 30px;
       width: 100%;
+      height: 80vh;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
 
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
       .BottomItem {
         width: 50%;
         margin-top: 20px;
       }
+
     }
+
   }
 
   .ContainerRight {
