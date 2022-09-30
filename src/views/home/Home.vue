@@ -71,25 +71,23 @@
 
 <script setup>
 // import { ref } from 'vue';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import {
   Search,
-// eslint-disable-next-line import/no-unresolved
 } from '@element-plus/icons-vue';
-// eslint-disable-next-line import/no-unresolved
-import Msg from '../components/Msg.vue';
+import Msg from '../../components/Msg.vue';
 
 // let msgitems = ref('');
 </script>
 
 <style scoped lang="scss">
-* {
+*{
   margin: 0;
   padding: 0;
 }
 
 .Container {
   width: 100%;
-  height: 100vh;
   background-color: #FFE76F;
   display: flex;
 
@@ -108,8 +106,6 @@ import Msg from '../components/Msg.vue';
       div {
         width: 20%;
         display: inline;
-        // margin-left: 10px;
-
       }
 
       button {
@@ -127,9 +123,9 @@ import Msg from '../components/Msg.vue';
     }
 
     .ContainerLeftMiddle {
-      padding-left: 1.5rem;
-      padding-top: 1rem;
-      margin-top: 1rem;
+      padding-left: 20px;
+      padding-top: 20px;
+      margin-top: 20px;
       margin-bottom: 20px;
 
       button {
@@ -138,7 +134,7 @@ import Msg from '../components/Msg.vue';
         background-color: #FFE76F;
         color: #002EA6;
         font-size: 30px;
-        margin-top: 1rem;
+        margin-top: 20px;
 
         i {
           display: block;
@@ -157,7 +153,7 @@ import Msg from '../components/Msg.vue';
         color: #002EA6;
         font-size: 20px;
         font-weight: bold;
-        margin-top: 1rem;
+        margin-top: 20px;
         margin-left: 70%;
       }
     }
@@ -166,7 +162,7 @@ import Msg from '../components/Msg.vue';
   .ContainerMiddle {
 
     width: 50%;
-    margin-left: 0.5rem;
+    margin-left: 10px;
     padding-top: 20px;
 
     .ContainerMiddleTop {
@@ -191,7 +187,7 @@ import Msg from '../components/Msg.vue';
         button {
           color: #002EA6;
           background-color: #FFE76F;
-          font-size: 1.6rem;
+          font-size: 20px;
           border: none;
           border-radius: 20%;
           cursor: pointer;
@@ -204,7 +200,7 @@ import Msg from '../components/Msg.vue';
     }
 
     .ContainerMiddleBottom {
-      padding-left: 3rem;
+      padding-left: 30px;
       width: 100%;
       display: flex;
       flex-wrap: wrap;
