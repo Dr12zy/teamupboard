@@ -8,6 +8,7 @@
       <input
         class="wrapper__input__content"
         placeholder="请输入账号"
+        v-model="data.username"
       />
     </div>
     <div class="wrapper__input">
@@ -15,32 +16,50 @@
         type="password"
         class="wrapper__input__content"
         placeholder="请输入密码"
+        v-model="data.password"
       />
     </div>
-    <div class="wrapper__input">
-      <input
-        type="password"
-        class="wrapper__input__content"
-        placeholder="请确认密码"
-      />
-    </div>
-    <div class="wrapper__login-botton">注册</div>
-    <div class="wrapper__login-link" @click="handleLoginClick">已有账号去登录</div>
+    <div class="wrapper__login-botton" @click="handleLogin">登录</div>
+    <div class="wrapper__login-link" @click="handleRegisterClick">立即注册</div>
   </div>
 </template>
 
-<script>
-import { defineComponent } from 'vue'
+<script lang="ts">
+import { defineComponent, reactive } from 'vue'
 import { useRouter } from 'vue-router'
+import axios from 'axios'
 
 export default defineComponent({
-  name: 'RegisterView',
   setup () {
+    const data = reactive({
+      username: '',
+      password: ''
+    })
     const router = useRouter()
-    const handleLoginClick = () => {
-      router.push({ name: 'Login' })
+    const handleLogin = async () => {
+      try {
+        const result = await axios.post(
+          'https://www.fastmock.site/mock/3433a439c55ca85ff0401e7f70fd06e6/juejing/api/login',
+          {
+            username: data.username,
+            password: data.password
+          }
+        )
+        if (result?.data?.error === 0) {
+          // localStorage.isLogin = true
+          // router.push({ name: 'Home' })
+          console.log('11111')
+        } else {
+          alert('登录失败')
+        }
+      } catch {
+        alert('请求失败')
+      }
     }
-    return { handleLoginClick }
+    const handleRegisterClick = () => {
+      router.push({ name: 'RegisterView' })
+    }
+    return { handleLogin, handleRegisterClick, data }
   }
 })
 </script>
@@ -55,7 +74,7 @@ export default defineComponent({
   &__img {
     display: block;
     width: 2rem;
-    margin: 0.2rem auto;
+    margin: 0.5rem auto;
   }
   &__input {
     height: 0.3rem;

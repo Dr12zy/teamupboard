@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="314" height="130" viewBox="0 0 314 130">
+  <g id="组件_3_1" data-name="组件 3 – 1" transform="translate(0.202 4.789)">
+    <g id="board">
+      <g id="多边形_1" data-name="多边形 1" transform="translate(36.798 0.211)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M23.5,0,47,120H0Z" stroke="none"/>
+        <path d="M 23.5 0 L 0 120 L 47 120 L 23.5 0 M 23.5 -5 C 25.89093971252441 -5 27.94729995727539 -3.307281494140625 28.40679931640625 -0.9609222412109375 L 51.90679931640625 119.0390777587891 C 52.19400024414062 120.5056762695312 51.81013870239258 122.0238571166992 50.8603401184082 123.1777038574219 C 49.91056060791016 124.3315200805664 48.49446105957031 125 47 125 L 0 125 C -1.494461059570312 125 -2.910560607910156 124.3315200805664 -3.860340118408203 123.1777038574219 C -4.810138702392578 122.0238571166992 -5.194000244140625 120.5056762695312 -4.90679931640625 119.0390777587891 L 18.59320068359375 -0.9609222412109375 C 19.05270004272461 -3.307281494140625 21.10906028747559 -5 23.5 -5 Z" stroke="none" fill="#aeabab"/>
+      </g>
+      <g id="矩形_1" data-name="矩形 1" transform="translate(-0.202 25.211)" fill="#295eb9" stroke="#aeabab" stroke-width="5">
+        <rect width="119" height="71" rx="5" stroke="none"/>
+        <rect x="2.5" y="2.5" width="114" height="66" rx="2.5" fill="none"/>
+      </g>
+    </g>
+    <text id="Team_up_Board" data-name="Team up  Board" transform="translate(7.798 35.211)" fill="#eee" font-size="43" font-family="BerlinSansFB-Reg, Berlin Sans FB" letter-spacing="0.005em"><tspan x="0" y="38" xml:space="preserve">Team up  Board</tspan></text>
+  </g>
+</svg>
