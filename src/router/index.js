@@ -1,27 +1,39 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-import Home from '../views/home/Home.vue';
-import Register from '../views/register/Register.vue';
-import Login from '../views/login/Login.vue';
 
 const routes = [
   {
     path: '/',
+    name: 'Login',
+    component: () => import('../views/login/Login.vue'),
+    meta: { hidden: true, title: '登录' },
+  },
+  {
+    path: '/Home',
     name: 'Home',
-    component: Home,
+    component: () => import('../views/home/Home.vue'),
+    meta: { hidden: true, title: '主页' },
   }, {
     path: '/register',
     name: 'Register',
-    component: Register,
+    component: () => import('../views/register/Register.vue'),
+    meta: { hidden: true, title: '注册' },
   }, {
     path: '/login',
     name: 'Login',
-    component: Login,
-  }
+    component: () => import('../views/login/Login.vue'),
+    meta: { hidden: true, title: '登录' },
+  },
+  {
+    path: '/settings',
+    name: 'Settings',
+    component: () => import('../views/settings/Settings.vue'),
+    meta: { hidden: true, title: '个人设置' },
+  },
 ];
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
+  routes,
 });
 
 export default router;

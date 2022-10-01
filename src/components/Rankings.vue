@@ -79,7 +79,6 @@ const GetAllRank = () => {
 
 onMounted(() => {
   GetAllRank();
-  console.log(RankMsg);
 });
 
 </script>
