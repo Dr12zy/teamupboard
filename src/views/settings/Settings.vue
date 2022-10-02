@@ -4,14 +4,14 @@
     <div class="Container">
         <div class="ContainerLeft">
             <div class="LeftButton">
-                <button>账号设置</button>
-                <button>系统设置</button>
+                <button @click="ChangeToUser">账号设置</button>
+                <button @click="ChangeToSystem">系统设置</button>
             </div>
         </div>
-        <div class="ContainerMiddle">
+        <div class="ContainerMiddle" v-show="UserSettings">
             <div class="MiddleTop">
                 <div class="MiddleTopLeft">
-                    <button>
+                    <button @click="BackToHome">
                         <i class="iconfont icon-fanhui"></i>
                     </button>
                 </div>
@@ -19,7 +19,7 @@
                     <h1>账号设置</h1>
                 </div>
             </div>
-            <div>
+            <div class="MiddleBottom">
                 <el-form :model="form" label-width="120px">
                     <el-form-item label="昵称">
                         <el-input v-model="form.name" />
@@ -36,6 +36,33 @@
                             <el-option label="女" value="female" />
                         </el-select>
                     </el-form-item>
+                    <el-form-item label="生日">
+                        <el-date-picker v-model="form.birthday" type="date"
+                        placeholder="Pick a Date" format="YYYY/MM/DD"
+                            value-format="YYYY-MM-DD" />
+                    </el-form-item>
+                </el-form>
+            </div>
+        </div>
+        <div class="ContainerMiddle" v-show="SystemSettings">
+            <div class="MiddleTop">
+                <div class="MiddleTopLeft">
+                    <button @click="BackToHome">
+                        <i class="iconfont icon-fanhui"></i>
+                    </button>
+                </div>
+                <div class="MiddleTopRight">
+                    <h1>系统设置</h1>
+                </div>
+            </div>
+            <div class="MiddleBottom">
+                <el-form :model="form" label-width="120px">
+                    <el-form-item label="夜间模式">
+                        <el-switch v-model="form.delivery" />
+                    </el-form-item>
+                    <el-form-item label="关于我们">
+                        <el-input v-model="form.name" />
+                    </el-form-item>
                 </el-form>
             </div>
         </div>
@@ -51,14 +78,34 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue';
+import { ref, reactive } from 'vue';
 import Rankings from '../../components/Rankings.vue';
+import router from '../../router';
 // let msgitems = ref('');
+
+const UserSettings = ref(true);
+const SystemSettings = ref(false);
 
 const form = reactive({
   name: '',
   sex: '',
+  birthday: '',
+  delivery: '',
 });
+
+const BackToHome = () => {
+  router.push('./Home');
+};
+
+const ChangeToUser = () => {
+  SystemSettings.value = false;
+  UserSettings.value = true;
+};
+
+const ChangeToSystem = () => {
+  UserSettings.value = false;
+  SystemSettings.value = true;
+};
 </script>
 
 <style scoped lang="scss">
@@ -91,6 +138,10 @@ const form = reactive({
             margin-top: 30px;
             cursor: pointer;
             border-radius: 15%;
+
+            &:focus {
+                background-color: #7599f4;
+            }
         }
     }
 
@@ -121,6 +172,20 @@ const form = reactive({
                 justify-content: center;
             }
         }
+
+        .MiddleBottom {
+
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            // height: 100%;
+            .el-form {
+                .el-form-item {
+                    margin-top: 50px;
+                    width: 90%;
+                }
+            }
+        }
     }
 
     .ContainerRight {
@@ -128,10 +193,10 @@ const form = reactive({
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        // justify-content: center;
 
         .ContainerLeftBottom {
-            margin-top: 5px;
+            margin-top: 100px;
 
             button {
                 cursor: pointer;
@@ -149,5 +214,9 @@ const form = reactive({
             margin-left: 20px;
         }
     }
+}
+
+.el-input__wrapper {
+    background-color: #FFE76F;
 }
 </style>

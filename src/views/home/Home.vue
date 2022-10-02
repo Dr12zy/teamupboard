@@ -5,7 +5,7 @@
     <div class="ContainerLeft">
       <div class="ContainerLeftTop">
         <div>
-          <button>
+          <button @click="GoToSettings">
             <i class="iconfont icon-shezhi-copy"></i>
           </button>
         </div>
@@ -80,7 +80,12 @@ import {
 } from '@element-plus/icons-vue';
 import Msg from '../../components/Msg.vue';
 import Rankings from '../../components/Rankings.vue';
+import router from '../../router';
 // let msgitems = ref('');
+
+const GoToSettings = () => {
+  router.push('./Settings');
+};
 </script>
 
 <style scoped lang="scss">
