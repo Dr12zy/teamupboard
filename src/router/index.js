@@ -29,6 +29,12 @@ const routes = [
     component: () => import('../views/settings/Settings.vue'),
     meta: { hidden: true, title: '个人设置' },
   },
+  {
+    path: 'published',
+    name: 'Published',
+    component: () => import('../views/deatils/Published.vue'),
+    meta: { hidden: true, title: '个人发布' },
+  },
 ];
 
 const router = createRouter({
