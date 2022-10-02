@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3681275_3m8kgp0meve.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3681275_8g65ggx4bl.css">
   <div class="Container">
     <div class="ContainerLeft">
       <div class="ContainerLeftTop">
@@ -10,7 +10,7 @@
           </button>
         </div>
         <div>
-          <button>
+          <button @click="GoToUserPublish">
             <i class="iconfont icon-yonghu-copy"></i>
           </button>
         </div>
@@ -86,6 +86,9 @@ import router from '../../router';
 const GoToSettings = () => {
   router.push('./Settings');
 };
+const GoToUserPublish = () => {
+  // router.push('./UserPublish');
+};
 </script>
 
 <style scoped lang="scss">
@@ -119,10 +122,10 @@ const GoToSettings = () => {
       }
 
       button {
-        cursor: pointer;
         border: none;
         background-color: #FFE76F;
         color: #002EA6;
+        cursor: pointer;
 
         i {
           display: block;
@@ -157,7 +160,6 @@ const GoToSettings = () => {
       margin-top: 5px;
 
       button {
-        cursor: pointer;
         border: solid;
         background-color: #FFE76F;
         color: #002EA6;
@@ -165,6 +167,7 @@ const GoToSettings = () => {
         font-weight: bold;
         margin-top: 20px;
         margin-left: 70%;
+        cursor: pointer;
       }
     }
 

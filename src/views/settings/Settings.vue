@@ -67,10 +67,10 @@
             </div>
         </div>
         <div class="ContainerRight">
-            <div class="ContainerLeftBottom">
+            <div class="ContainerRightTop">
                 <button>更多tag</button>
             </div>
-            <div class="ContainerLeftDeep">
+            <div class="ContainerRightBottom">
                 <Rankings></Rankings>
             </div>
         </div>
@@ -195,7 +195,7 @@ const ChangeToSystem = () => {
         align-items: center;
         // justify-content: center;
 
-        .ContainerLeftBottom {
+        .ContainerRightTop {
             margin-top: 100px;
 
             button {
@@ -210,7 +210,7 @@ const ChangeToSystem = () => {
             }
         }
 
-        .ContainerLeftDeep {
+        .ContainerRightBottom {
             margin-left: 20px;
         }
     }
