@@ -108,8 +108,8 @@ const GoToUserPublish = () => {
 
     .ContainerLeftTop {
       display: flex;
-      padding-left: 20px;
-      padding-top: 20px;
+      padding-left: .2rem;
+      padding-top: .2rem;
       flex-direction: row;
       flex-wrap: nowrap;
       align-items: center;
@@ -128,58 +128,58 @@ const GoToUserPublish = () => {
 
         i {
           display: block;
-          font-size: 55px;
-          margin-top: 5px;
+          font-size: .55rem;
+          margin-top: .05rem;
         }
       }
     }
 
     .ContainerLeftMiddle {
-      padding-left: 20px;
-      padding-top: 20px;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      padding-left: .2rem;
+      padding-top: .2rem;
+      margin-top: .2rem;
+      margin-bottom: .2rem;
 
       button {
         cursor: pointer;
         border: none;
         background-color: #FFE76F;
         color: #002EA6;
-        font-size: 30px;
-        margin-top: 20px;
+        font-size: .3rem;
+        margin-top: .2rem;
 
         i {
           display: block;
-          margin-top: 5px;
+          margin-top: .05rem;
         }
       }
     }
 
     .ContainerLeftBottom {
-      margin-top: 5px;
+      margin-top: .05rem;
 
       button {
         border: solid;
         background-color: #FFE76F;
         color: #002EA6;
-        font-size: 20px;
+        font-size: .2rem;
         font-weight: bold;
-        margin-top: 20px;
+        margin-top: .2rem;
         margin-left: 70%;
         cursor: pointer;
       }
     }
 
     .ContainerLeftDeep {
-      margin-left: 20px;
+      margin-left: .2rem;
     }
   }
 
   .ContainerMiddle {
 
     width: 50%;
-    margin-left: 10px;
-    padding-top: 20px;
+    margin-left: .1rem;
+    padding-top: .2rem;
 
     .ContainerMiddleTop {
       display: flex;
@@ -190,7 +190,7 @@ const GoToUserPublish = () => {
 
       .MiddleTop {
         // border-radius: 10%;
-        padding: 20px;
+        padding: .2rem;
         display: flex;
         flex-wrap: nowrap;
       }
@@ -203,14 +203,14 @@ const GoToUserPublish = () => {
         button {
           color: #002EA6;
           background-color: #FFE76F;
-          font-size: 20px;
+          font-size: .2rem;
           border: none;
           border-radius: 20%;
           cursor: pointer;
         }
 
         button {
-          margin-left: 100px;
+          margin-left: 1rem;
         }
       }
     }
@@ -218,9 +218,9 @@ const GoToUserPublish = () => {
     .ContainerMiddleBottom {
       overflow-y: scroll;
       overflow-x: hidden;
-      padding-left: 30px;
+      padding-left: .3rem;
       width: 100%;
-      height: 80vh;
+      height: 5rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -232,7 +232,7 @@ const GoToUserPublish = () => {
 
       .BottomItem {
         width: 50%;
-        margin-top: 20px;
+        margin-top: .2rem;
       }
 
     }

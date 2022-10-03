@@ -8,11 +8,12 @@ const routes = [
     meta: { hidden: true, title: '登录' },
   },
   {
-    path: '/Home',
+    path: '/home',
     name: 'Home',
     component: () => import('../views/home/Home.vue'),
     meta: { hidden: true, title: '主页' },
-  }, {
+  },
+  {
     path: '/register',
     name: 'Register',
     component: () => import('../views/register/Register.vue'),

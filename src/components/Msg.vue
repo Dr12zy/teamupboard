@@ -33,8 +33,8 @@
         .TopLeft {
             img {
                 border-radius: 50%;
-                width: 100px;
-                height: 100px;
+                width: 1rem;
+                height: 1rem;
             }
         }
 
@@ -42,7 +42,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-left: 10px;
+            margin-left: .1rem;
 
             h2 {
                 color: #002EA6;
