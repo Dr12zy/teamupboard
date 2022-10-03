@@ -63,7 +63,6 @@
         <div class="BottomItem" v-for="(item, i) in 20" :key="i">
           <Msg :msgitems="item"></Msg>
         </div>
-
       </div>
     </div>
     <div class="ContainerRight">
