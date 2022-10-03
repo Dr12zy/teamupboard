@@ -88,18 +88,18 @@ onMounted(() => {
     .RankBody {
         display: flex;
         width: 100%;
-        margin-top: 20px;
+        margin-top: .2rem;
         .RankLeft {
             display: flex;
             width: 10%;
-            font-size: 18px;
+            font-size: .18rem;
             justify-content: center;
             align-items: center;
         }
 
         .RankMiddle {
             width: 60%;
-            font-size: 14px;
+            font-size: .14rem;
         }
 
         .RankRight {
