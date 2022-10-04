@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="MiddleBottom">
-                <el-form :model="form" label-width="120px">
+                <el-form :model="form" label-width="1.2rem">
                     <el-form-item label="昵称">
                         <el-input v-model="form.name" />
                     </el-form-item>
@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="MiddleBottom">
-                <el-form :model="form" label-width="120px">
+                <el-form :model="form" label-width=".72rem">
                     <el-form-item label="夜间模式">
                         <el-switch v-model="form.delivery" />
                     </el-form-item>
@@ -94,7 +94,7 @@ const form = reactive({
 });
 
 const BackToHome = () => {
-  router.push('./Home');
+  router.push('./');
 };
 
 const ChangeToUser = () => {
@@ -134,8 +134,8 @@ const ChangeToSystem = () => {
         button {
             border: solid #002EA6;
             background-color: #FFE76F;
-            font-size: 25px;
-            margin-top: 30px;
+            font-size: .25rem;
+            margin-top: .3rem;
             cursor: pointer;
             border-radius: 15%;
 
@@ -147,15 +147,14 @@ const ChangeToSystem = () => {
 
     .ContainerMiddle {
         width: 50%;
-        margin-left: 10px;
-        padding-top: 20px;
+        margin-left: .1rem;
+        padding-top: .2rem;
 
         .MiddleTop {
             display: flex;
 
             .MiddleTopLeft {
                 display: inline;
-
                 button {
                     border: 0;
                     background-color: #FFE76F;
@@ -175,13 +174,9 @@ const ChangeToSystem = () => {
 
         .MiddleBottom {
 
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
-            // height: 100%;
             .el-form {
                 .el-form-item {
-                    margin-top: 50px;
+                    margin-top: .5rem;
                     width: 90%;
                 }
             }
@@ -196,22 +191,22 @@ const ChangeToSystem = () => {
         // justify-content: center;
 
         .ContainerRightTop {
-            margin-top: 100px;
+            margin-top: 1rem;
 
             button {
                 cursor: pointer;
                 border: solid;
                 background-color: #FFE76F;
                 color: #002EA6;
-                font-size: 20px;
+                font-size: .2rem;
                 font-weight: bold;
-                margin-top: 20px;
-                margin-left: 100px;
+                margin-top: .2rem;
+                margin-left: 1rem;
             }
         }
 
         .ContainerRightBottom {
-            margin-left: 20px;
+            margin-left: .2rem;
         }
     }
 }

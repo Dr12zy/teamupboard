@@ -2,17 +2,18 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
-    path: '/',
+    path: '/login',
     name: 'Login',
     component: () => import('../views/login/Login.vue'),
     meta: { hidden: true, title: '登录' },
   },
   {
-    path: '/Home',
+    path: '/',
     name: 'Home',
     component: () => import('../views/home/Home.vue'),
     meta: { hidden: true, title: '主页' },
-  }, {
+  },
+  {
     path: '/register',
     name: 'Register',
     component: () => import('../views/register/Register.vue'),
@@ -27,7 +28,7 @@ const routes = [
   {
     path: '/published',
     name: 'Published',
-    component: () => import('../views/deatils/Published.vue'),
+    component: () => import('../views/details/Published.vue'),
     meta: { hidden: true, title: '个人发布' },
   },
 ];
@@ -35,6 +36,13 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  const { isLogin } = localStorage;
+  const { name } = to;
+  const isLoginOrRegister = (name === 'Login' || name === 'Register');
+  (isLogin || isLoginOrRegister) ? next() : next({ name: 'Login' })
 });
 
 export default router;

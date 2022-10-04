@@ -182,8 +182,8 @@ onMounted(() => {
         .TopLeft {
             img {
                 border-radius: 50%;
-                width: 100px;
-                height: 100px;
+                width: 1rem;
+                height: 1rem;
             }
         }
 
@@ -191,8 +191,7 @@ onMounted(() => {
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
-            margin-left: 10px;
+            margin-left: .1rem;
 
             .TopRightT {
                 display: flex;

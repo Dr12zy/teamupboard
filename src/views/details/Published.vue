@@ -57,121 +57,121 @@ export default defineComponent({
   top: 0;
   right: 0;
   left: 0;
-  height: 10rem;
+  height: 14.44rem;
   // bottom: 0;
   background: #f1f1f1;
 }
 .top-left {
   display: flex;
   &__icon {
-    margin-top: .1rem;
-    margin-left: .25rem;
-    font-size: .25rem;
+    margin-top: .14rem;
+    margin-left: .36rem;
+    font-size: .36rem;
     color: #0091FF;
   }
   &__more {
-    margin-top: .2rem;
-    margin-left: 1.9rem;
+    margin-top: .29rem;
+    margin-left: 2.74rem;
     color: #999;
   }
 }
 .DetailLeft {
   position: absolute;
-  top: .2rem;
+  top: .29rem;
   left: 0;
-  height: 8rem;
-  width: 2.6rem;
-  margin-top: .2rem;
-  margin-left: .2rem;
-  padding-top: .1rem;
-  padding-left: .1rem;
+  height: 11.55rem;
+  width: 3.75rem;
+  margin-top: .29rem;
+  margin-left: .29rem;
+  padding-top: .14rem;
+  padding-left: .14rem;
   border: .01rem solid #555;
-  border-radius: .2rem;
+  border-radius: .29rem;
   // background: black;
 }
 .DetailRight {
   position: absolute;
   top: 0;
-  left: 3.2rem;
-  width: 4.8rem;
-  height: 8rem;
+  left: 5.2rem;
+  width: 6.93rem;
+  height: 11.55rem;
   background: #999;
   &__top {
-    width: 4.8rem;
-    height: .97rem;
+    width: 6.93rem;
+    height: 1.4rem;
     background: #666;
     &__icon {
       position: absolute;
-      top: .1rem;
-      left: .1rem;
+      top: .14rem;
+      left: .14rem;
       color: #fff;
-      font-size: .2rem;
+      font-size: .29rem;
     }
     &__font {
       position: absolute;
-      top: .25rem;
-      left: 2.08rem;
-      font-size: .13rem;
+      top: .36rem;
+      left: 3rem;
+      font-size: .19rem;
       color: #fff;
     }
   }
   &__radius {
     position: absolute;
-    top: .58rem;
-    left: .45rem;
-    width: .75rem;
-    height: .75rem;
-    border-radius: .5rem;
+    top: .84rem;
+    left: .65rem;
+    width: 1.08rem;
+    height: 1.08rem;
+    border-radius: .72rem;
     background: #fff;
   }
   &__self {
     display: flex;
-    margin-top: .5rem;
-    margin-left: .2rem;
+    margin-top: .72rem;
+    margin-left: .29rem;
     &__sex {
-      margin-left: .4rem;
+      margin-left: .58rem;
     }
     &__modify {
       position: absolute;
-      right: 1rem;
-      top: 1.1rem;
-      width: 1.15rem;
-      height: .3rem;
-      line-height: .3rem;
-      font-size: .15rem;
+      right: 1.44rem;
+      top: 1.59rem;
+      width: 1.66rem;
+      height: .43rem;
+      line-height: .43rem;
+      font-size: .22rem;
       text-align: center;
       color: #fff;
       background: #0091FF;
-      border-radius: .2rem;
+      border-radius: .29rem;
     }
   }
   &__select {
     display: flex;
-    margin-top: .1rem;
-    height: .38rem;
+    margin-top: .14rem;
+    height: .55rem;
     background: #0091FF;
     &__option {
-      margin-left: .7rem;
-      margin-top: .08rem;
-      font-size: .15rem;
+      margin-left: 1.01rem;
+      margin-top: .12rem;
+      font-size: .22rem;
       color: #f8f8f8;
     }
   }
   &__content {
-    margin-top: .2rem;
-    margin-left: .3rem;
-    width: 4.2rem;
-    height: 2rem;
+    margin-top: .29rem;
+    margin-left: .43rem;
+    width: 6.06rem;
+    height: 2.89rem;
     background: #fff;
-    border-radius: .3rem;
+    border-radius: .43rem;
     &__title {
-      line-height: .5rem;
-      margin-left: .3rem;
-      font-size: .25rem;
+      line-height: .72rem;
+      margin-left: .43rem;
+      font-size: .36rem;
     }
     &__context {
-      line-height: .2rem;
-      margin: 0 .2rem;
+      line-height: .29rem;
+      margin: 0 .29rem;
     }
   }
 }
