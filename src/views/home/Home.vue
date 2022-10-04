@@ -220,7 +220,7 @@ const GoToUserPublish = () => {
       overflow-x: hidden;
       padding-left: .3rem;
       width: 100%;
-      height: 5rem;
+      height: 8rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;

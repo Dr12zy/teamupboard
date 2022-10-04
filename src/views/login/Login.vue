@@ -46,9 +46,8 @@ export default defineComponent({
           }
         )
         if (result?.data?.error === 0) {
-          // localStorage.isLogin = true
-          // router.push({ name: 'Home' })
-          console.log('11111')
+          localStorage.isLogin = true
+          router.push({ name: 'Home' })
         } else {
           alert('登录失败')
         }
@@ -57,7 +56,7 @@ export default defineComponent({
       }
     }
     const handleRegisterClick = () => {
-      router.push({ name: 'RegisterView' })
+      router.push({ name: 'Register' })
     }
     return { handleLogin, handleRegisterClick, data }
   }
