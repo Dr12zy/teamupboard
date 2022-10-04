@@ -60,7 +60,7 @@
         </div>
       </div>
       <div class="ContainerMiddleBottom">
-        <div class="BottomItem" v-for="(item, i) in 20" :key="i">
+        <div class="BottomItem" v-for="(item, i) in msgitems" :key="i">
           <Msg :msgitems="item"></Msg>
         </div>
 
@@ -73,7 +73,7 @@
 </template>
 
 <script setup>
-// import { ref, reactive } from 'vue';
+import { ref, onMounted } from 'vue';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import {
   Search,
@@ -81,14 +81,84 @@ import {
 import Msg from '../../components/Msg.vue';
 import Rankings from '../../components/Rankings.vue';
 import router from '../../router';
-// let msgitems = ref('');
 
+const msgitems = ref('');
 const GoToSettings = () => {
   router.push('./Settings');
 };
 const GoToUserPublish = () => {
-  // router.push('./UserPublish');
+  router.push('./Published');
 };
+
+const GetAllMsg = () => {
+  msgitems.value = [{
+    title: '并夕夕5人团',
+    tag: '便宜',
+    message: '快递纸箱批发定做 彩色印刷logo发货纸箱订制定制纸盒子包装盒子',
+    img: 'https://img.enzemky.com/swiper2.jpg',
+    total: '10',
+    already: '3',
+  }, {
+    title: '并夕夕6人团',
+    tag: '实惠',
+    message: '苹果X手机壳iPhoneXS XR XSMAX无边框磨砂透明硅胶软壳手机保护套',
+    img: 'https://img.enzemky.com/swiper1.jpg',
+  }, {
+    title: '并夕夕7人团',
+    tag: '经济',
+    message: 'vivoz1手机壳全包z1i防摔vivoz1青春版超薄软壳网红v1730DA电镀壳',
+    img: 'https://img.enzemky.com/swiper3.jpg',
+  }, {
+    title: '并夕夕8人团',
+    tag: '物美价廉',
+    message: '长条纸箱快递箱批发定做 三层特硬长方形打包纸盒子包装盒',
+    img: 'https://img.enzemky.com/swiper4.jpg',
+  }, {
+    title: '并夕夕9人团',
+    tag: '香香',
+    message: '苹果7plus手机壳iPhone8/7/8plus超薄防摔磨砂保护套男女情侣网红',
+    img: 'https://img.enzemky.com/swiper5.jpg',
+  }, {
+    title: '并夕夕10人团',
+    tag: '香香',
+    message: '苹果7plus手机壳iPhone8/7/8plus超薄防摔磨砂保护套男女情侣网红',
+    img: 'https://img.enzemky.com/swiper6.jpg',
+  }, {
+    title: '并夕夕11人团',
+    tag: '香香',
+    message: '苹果7plus手机壳iPhone8/7/8plus超薄防摔磨砂保护套男女情侣网红',
+    img: 'https://img.enzemky.com/swiper4.jpg',
+  }, {
+    title: '并夕夕12人团',
+    tag: '香香',
+    message: '苹果7plus手机壳iPhone8/7/8plus超薄防摔磨砂保护套男女情侣网红',
+    img: 'https://img.enzemky.com/swiper2.jpg',
+  }, {
+    title: '并夕夕13人团',
+    tag: '香香',
+    message: '苹果7plus手机壳iPhone8/7/8plus超薄防摔磨砂保护套男女情侣网红',
+    img: 'https://img.enzemky.com/swiper1.jpg',
+  }, {
+    title: '并夕夕14人团',
+    tag: '香香',
+    message: '苹果7plus手机壳iPhone8/7/8plus超薄防摔磨砂保护套男女情侣网红',
+    img: 'https://img.enzemky.com/swiper5.jpg',
+  }, {
+    title: '并夕夕15人团',
+    tag: '香香',
+    message: '苹果7plus手机壳iPhone8/7/8plus超薄防摔磨砂保护套男女情侣网红',
+    img: 'https://img.enzemky.com/swiper3.jpg',
+  }, {
+    title: '并夕夕16人团',
+    tag: '香香',
+    message: '苹果7plus手机壳iPhone8/7/8plus超薄防摔磨砂保护套男女情侣网红',
+    img: 'https://img.enzemky.com/swiper4.jpg',
+  }];
+};
+
+onMounted(() => {
+  GetAllMsg();
+});
 </script>
 
 <style scoped lang="scss">

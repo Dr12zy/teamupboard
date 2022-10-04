@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3681275_8g65ggx4bl.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3681275_mv4aw2fkxk.css">
     <div class="Container">
         <div class="ContainerLeft">
             <div class="LeftButton">

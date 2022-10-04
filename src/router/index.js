@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
@@ -17,11 +17,6 @@ const routes = [
     name: 'Register',
     component: () => import('../views/register/Register.vue'),
     meta: { hidden: true, title: '注册' },
-  }, {
-    path: '/login',
-    name: 'Login',
-    component: () => import('../views/login/Login.vue'),
-    meta: { hidden: true, title: '登录' },
   },
   {
     path: '/settings',
@@ -30,7 +25,7 @@ const routes = [
     meta: { hidden: true, title: '个人设置' },
   },
   {
-    path: 'published',
+    path: '/published',
     name: 'Published',
     component: () => import('../views/deatils/Published.vue'),
     meta: { hidden: true, title: '个人发布' },
@@ -38,7 +33,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 });
 
