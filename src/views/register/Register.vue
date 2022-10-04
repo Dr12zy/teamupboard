@@ -24,7 +24,7 @@
         placeholder="请确认密码"
       />
     </div>
-    <div class="wrapper__login-botton">注册</div>
+    <div class="wrapper__login-botton" @click="handleLoginClick">注册</div>
     <div class="wrapper__login-link" @click="handleLoginClick">已有账号去登录</div>
   </div>
 </template>
