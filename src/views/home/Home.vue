@@ -3,55 +3,24 @@
   <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3681275_8g65ggx4bl.css">
   <div class="Container">
     <div class="ContainerLeft">
-      <div class="ContainerLeftTop">
-        <div>
-          <button @click="GoToSettings">
-            <i class="iconfont icon-shezhi-copy"></i>
-          </button>
-        </div>
-        <div>
-          <button @click="GoToUserPublish">
-            <i class="iconfont icon-yonghu-copy"></i>
-          </button>
-        </div>
-        <div>
-          <button>
-            <i class="iconfont icon-tongzhi-copy"></i>
-          </button>
-        </div>
-      </div>
-      <div class="ContainerLeftMiddle">
-        <div>
-          <button>
-            我的发布
-          </button>
-        </div>
-        <div>
-          <button>
-            我的申请
-          </button>
-        </div>
-        <div>
-          <button>
-            我的参与
-          </button>
-        </div>
-      </div>
       <!-- <el-divider /> -->
-      <div class="ContainerLeftBottom">
+      <div class="ContainerLeftTop">
         <button>更多tag</button>
       </div>
-      <div class="ContainerLeftDeep">
+      <div class="ContainerLeftBottom">
         <Rankings></Rankings>
       </div>
     </div>
     <div class="ContainerMiddle">
       <div class="ContainerMiddleTop">
-        <div class="MiddleTop">
+        <div class="MiddleT">
+          <Nav></Nav>
+        </div>
+        <div class="MiddleM">
           <el-input></el-input>
           <el-button :icon="Search" circle />
         </div>
-        <div class="MiddleBottom">
+        <div class="MiddleB">
           <button>本地</button>
           <button>线上</button>
           <button>
@@ -79,15 +48,9 @@ import {
 } from '@element-plus/icons-vue';
 import Msg from '../../components/Msg.vue';
 import Rankings from '../../components/Rankings.vue';
-import router from '../../router';
+import Nav from '../../components/Nav.vue';
 
 const msgitems = ref('');
-const GoToSettings = () => {
-  router.push('./Settings');
-};
-const GoToUserPublish = () => {
-  router.push('./Published');
-};
 
 const GetAllMsg = () => {
   msgitems.value = [{
@@ -132,26 +95,6 @@ const GetAllMsg = () => {
     tag: '香香',
     message: '苹果7plus手机壳iPhone8/7/8plus超薄防摔磨砂保护套男女情侣网红',
     img: 'https://img.enzemky.com/swiper2.jpg',
-  }, {
-    title: '并夕夕13人团',
-    tag: '香香',
-    message: '苹果7plus手机壳iPhone8/7/8plus超薄防摔磨砂保护套男女情侣网红',
-    img: 'https://img.enzemky.com/swiper1.jpg',
-  }, {
-    title: '并夕夕14人团',
-    tag: '香香',
-    message: '苹果7plus手机壳iPhone8/7/8plus超薄防摔磨砂保护套男女情侣网红',
-    img: 'https://img.enzemky.com/swiper5.jpg',
-  }, {
-    title: '并夕夕15人团',
-    tag: '香香',
-    message: '苹果7plus手机壳iPhone8/7/8plus超薄防摔磨砂保护套男女情侣网红',
-    img: 'https://img.enzemky.com/swiper3.jpg',
-  }, {
-    title: '并夕夕16人团',
-    tag: '香香',
-    message: '苹果7plus手机壳iPhone8/7/8plus超薄防摔磨砂保护套男女情侣网红',
-    img: 'https://img.enzemky.com/swiper4.jpg',
   }];
 };
 
@@ -175,57 +118,10 @@ onMounted(() => {
 
   .ContainerLeft {
     width: 25%;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     .ContainerLeftTop {
-      display: flex;
-      padding-left: .2rem;
-      padding-top: .2rem;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-items: center;
-      justify-content: flex-start;
-
-      div {
-        width: 20%;
-        display: inline;
-      }
-
-      button {
-        border: none;
-        background-color: #FFE76F;
-        color: #002EA6;
-        cursor: pointer;
-
-        i {
-          display: block;
-          font-size: .55rem;
-          margin-top: .05rem;
-        }
-      }
-    }
-
-    .ContainerLeftMiddle {
-      padding-left: .2rem;
-      padding-top: .2rem;
-      margin-top: .2rem;
-      margin-bottom: .2rem;
-
-      button {
-        cursor: pointer;
-        border: none;
-        background-color: #FFE76F;
-        color: #002EA6;
-        font-size: .3rem;
-        margin-top: .2rem;
-
-        i {
-          display: block;
-          margin-top: .05rem;
-        }
-      }
-    }
-
-    .ContainerLeftBottom {
       margin-top: .05rem;
 
       button {
@@ -240,7 +136,7 @@ onMounted(() => {
       }
     }
 
-    .ContainerLeftDeep {
+    .ContainerLeftBottom {
       margin-left: .2rem;
     }
   }
@@ -258,14 +154,17 @@ onMounted(() => {
       width: 100%;
       background-color: #FFE76F;
 
-      .MiddleTop {
+      .MiddleT{
+
+      }
+      .MiddleM {
         // border-radius: 10%;
         padding: .2rem;
         display: flex;
         flex-wrap: nowrap;
       }
 
-      .MiddleBottom {
+      .MiddleB {
         display: flex;
         align-items: center;
         justify-content: center;
