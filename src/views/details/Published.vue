@@ -1,12 +1,17 @@
 <template>
   <div class="wrapper">
-    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3681275_8g65ggx4bl.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3681275_qnuaci4wh9i.css">
     <div class="top-left">
-      <i class="iconfont icon-tongzhi-copy top-left__icon"></i>
     <div class="top-left__more">更多tag</div>
     </div>
     <div class="DetailLeft">
       <Rankings></Rankings>
+    </div>
+    <div class="DetailTop">
+      <i class="iconfont icon-yonghu DetailTop__icon1"></i>
+      <i class="iconfont icon-zhuye DetailTop__icon"></i>
+      <i class="iconfont icon-tongzhi-copy DetailTop__icon"></i>
+      <i class="iconfont icon-shezhi DetailTop__icon"></i>
     </div>
     <div class="DetailRight">
       <div class="DetailRight__top">
@@ -63,15 +68,9 @@ export default defineComponent({
 }
 .top-left {
   display: flex;
-  &__icon {
-    margin-top: .14rem;
-    margin-left: .36rem;
-    font-size: .36rem;
-    color: #0091FF;
-  }
   &__more {
-    margin-top: .29rem;
-    margin-left: 2.74rem;
+    margin-top: .26rem;
+    margin-left: 3.3rem;
     color: #999;
   }
 }
@@ -89,9 +88,25 @@ export default defineComponent({
   border-radius: .29rem;
   // background: black;
 }
+.DetailTop {
+  position: absolute;
+  top: .2rem;
+  left: 5.2rem;
+  width: 6.93rem;
+  height: .8rem;
+  &__icon1 {
+    margin-left: .6rem;
+    font-size: .5rem;
+    color: #0091FF;
+  }
+  &__icon {
+    margin-left: 1.2rem;
+    font-size: .5rem;
+  }
+}
 .DetailRight {
   position: absolute;
-  top: 0;
+  top: 1rem;
   left: 5.2rem;
   width: 6.93rem;
   height: 11.55rem;
