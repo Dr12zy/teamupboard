@@ -42,6 +42,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import axios from 'axios';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import {
   Search,
@@ -53,6 +54,9 @@ import Nav from '../../components/Nav.vue';
 const msgitems = ref('');
 
 const GetAllMsg = () => {
+  axios.post('url').then((res) => {
+    msgitems.value = res.data;
+  });
   msgitems.value = [{
     title: '并夕夕5人团',
     tag: '便宜',
