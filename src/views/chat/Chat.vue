@@ -14,7 +14,7 @@
       ></i>
       <i
        class="iconfont icon-zhuye DetailTop__icon"
-       
+       @click="handleHomeClick"
       ></i>
       <i class="iconfont icon-tongzhi-copy DetailTop__icon1"></i>
       <i

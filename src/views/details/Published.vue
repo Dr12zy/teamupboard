@@ -48,11 +48,14 @@
       </div>
       <div
        class="DetailRight__content"
-       v-for="(item, index) in contentList"
+       v-for="(item, index) in msgitems"
        :key="index"
       >
-        <div class="DetailRight__content__title">{{item.title}}</div>
-        <div class="DetailRight__content__context">{{item.context}}</div>
+        <!-- <div class="DetailRight__content__title">{{item.title}}</div>
+        <div class="DetailRight__content__context">{{item.context}}</div> -->
+        <div class="DetailRight__content__item">
+          <Msg :msgitems="item"></Msg>
+        </div>
       </div>
     </div>
   </div>
@@ -78,11 +81,25 @@ export default defineComponent({
     }
     const selfInformation = { id: '椰子君', img: 'https://img.enzemky.com/swiper5.jpg', sex: '♂', introduction: '帅比冠希' }
     const communication = { release: '11', apply: '1', receive: '10'} 
-    const contentList = [
-      {title: '今天吃什么', context: '今天吃“东安子鸡”、“红煨鱼翅”、“腊味合蒸”、“面包全鸭”、“油辣冬笋尖”、“板栗烧菜心”、“五元神仙鸡”、“吉首酸肉”等。 其中“红煨鱼翅”又名“组庵鱼翅”，是湖南地方名菜。 烹调方法是用鱼翅加鸡汤、酱油等，用小火煨制而成，汁浓味鲜，以清鲜糯柔著名。'},
-      {title: '粤菜是啥', context: '粤菜中的广府菜集顺德、南海、番禺、东莞、香山、四邑、宝安等地方风味的特色，兼京、苏、淮、杭等外省菜以及西菜之所长，融为一体，自成一家。粤菜取百家之长，用料广博，选料珍奇，配料精巧，善于在模仿中创新，依食客喜好而烹制。烹调技艺多样善变，用料奇异广博。在烹调上以炒、爆为主，兼有烩、煎、烤，讲究清而不淡，鲜而不俗，嫩而不生，油而不腻'}
-    ]
-    return { handleChatClick, handleSettingsClick, handleHomeClick, selfInformation, communication, contentList }
+    const msgitems = [{
+    title: '并夕夕5人团',
+    tag: '便宜',
+    message: '快递纸箱批发定做 彩色印刷logo发货纸箱订制定制纸盒子包装盒子',
+    img: 'https://img.enzemky.com/swiper2.jpg',
+    total: '10',
+    already: '3',
+  }, {
+    title: '并夕夕6人团',
+    tag: '实惠',
+    message: '苹果X手机壳iPhoneXS XR XSMAX无边框磨砂透明硅胶软壳手机保护套',
+    img: 'https://img.enzemky.com/swiper1.jpg',
+  }, {
+    title: '并夕夕7人团',
+    tag: '经济',
+    message: 'vivoz1手机壳全包z1i防摔vivoz1青春版超薄软壳网红v1730DA电镀壳',
+    img: 'https://img.enzemky.com/swiper3.jpg',
+  }];
+    return { handleChatClick, handleSettingsClick, handleHomeClick, selfInformation, communication, msgitems }
   }
 })
 </script>
@@ -212,17 +229,13 @@ export default defineComponent({
     margin-top: .29rem;
     margin-left: .43rem;
     width: 6.06rem;
-    height: 2.89rem;
+    height: 2rem;
     background: #fff;
     border-radius: .43rem;
-    &__title {
-      line-height: .72rem;
-      margin-left: .43rem;
-      font-size: .36rem;
-    }
-    &__context {
-      line-height: .29rem;
-      margin: 0 .29rem;
+    &__item {
+      padding-top: .2rem;
+      margin-left: .8rem;
+      font-size: .2rem;
     }
   }
 }
