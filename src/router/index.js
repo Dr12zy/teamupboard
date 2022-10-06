@@ -30,7 +30,12 @@ const routes = [
     name: 'Published',
     component: () => import('../views/details/Published.vue'),
     meta: { hidden: true, title: '个人发布' },
-  },
+  }, {
+    path: '/chat',
+    name: 'Chat',
+    component: () => import('../views/chat/Chat.vue'),
+    meta: { hidden: true, title: '聊天' },
+  }
 ];
 
 const router = createRouter({
