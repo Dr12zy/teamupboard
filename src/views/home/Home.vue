@@ -16,9 +16,15 @@
         <div class="MiddleT">
           <Nav></Nav>
         </div>
-        <div class="MiddleM">
-          <el-input></el-input>
-          <el-button :icon="Search" circle />
+        <div >
+          <el-input
+              v-model="input1"
+              placeholder="Search"
+              class="MiddleM"
+              size="large"
+              :suffix-icon="Search">
+          </el-input>
+
         </div>
         <div class="MiddleB">
           <button>本地</button>
@@ -29,8 +35,8 @@
         </div>
       </div>
       <div class="ContainerMiddleBottom">
-        <div class="BottomItem" v-for="(item, i) in msgitems" :key="i">
-          <Msg :msgitems="item"></Msg>
+          <div class="BottomItem" v-for="(item, i) in msgitems" :key="i">
+            <Msg :msgitems="item"></Msg>
         </div>
       </div>
     </div>
@@ -50,6 +56,7 @@ import {
 import Msg from '../../components/Msg.vue';
 import Rankings from '../../components/Rankings.vue';
 import Nav from '../../components/Nav.vue';
+
 
 const msgitems = ref('');
 
@@ -117,7 +124,7 @@ onMounted(() => {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  background-color: #FFE76F;
+  background-color: #EFEFEF;
   display: flex;
 
   .ContainerLeft {
@@ -126,12 +133,12 @@ onMounted(() => {
     flex-direction: column;
     justify-content: center;
     .ContainerLeftTop {
-      margin-top: .05rem;
+      margin-top: -2rem;
 
       button {
         border: solid;
-        background-color: #FFE76F;
-        color: #002EA6;
+        //background-color: #FFE76F;
+        color: black;
         font-size: .2rem;
         font-weight: bold;
         margin-top: .2rem;
@@ -156,16 +163,19 @@ onMounted(() => {
       flex-direction: column;
       flex-wrap: nowrap;
       width: 100%;
-      background-color: #FFE76F;
+      background-color: #EFEFEF;
+
 
       .MiddleT{
-
       }
       .MiddleM {
-        // border-radius: 10%;
+        width: 90%;
         padding: .2rem;
+        margin: 0 auto;
         display: flex;
         flex-wrap: nowrap;
+        border-radius: 1rem 1rem;
+
       }
 
       .MiddleB {
@@ -174,11 +184,11 @@ onMounted(() => {
         justify-content: center;
 
         button {
-          color: #002EA6;
-          background-color: #FFE76F;
+          color: navy;
+          //background-color: #DDDDDD;
           font-size: .2rem;
           border: none;
-          border-radius: 20%;
+          //border-radius: 0.05rem;
           cursor: pointer;
         }
 
@@ -198,14 +208,23 @@ onMounted(() => {
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+      //border: #002EA6 0.04rem solid;
+      //border-radius: 4%;
 
       &::-webkit-scrollbar {
         display: none;
       }
-
       .BottomItem {
-        width: 50%;
-        margin-top: .2rem;
+        //display: flex;
+        width: 40%;
+        height: 25%;
+        margin: 0.2rem 0.5rem 0 0;
+        padding: 0.1rem 0 0 0.1rem;
+        background-color: whitesmoke;
+        box-sizing: border-box;
+        border-radius: 0.2rem;
+        box-shadow: 0.03rem 0.03rem 0.05rem #002EA6;
+
       }
 
     }
@@ -213,7 +232,8 @@ onMounted(() => {
   }
 
   .ContainerRight {
-    width: 25%;
+    width: 20%;
+    margin-right: -2rem;
   }
 }
 </style>
