@@ -106,8 +106,8 @@ onMounted(() => {
 
     .MsgButton {
         position: absolute;
-        width: 80%;
-        height: 120px;
+        width: 100%;
+        height: 120%;
         border: none;
         background-color: rgba(0, 0, 0, 0);
         cursor: pointer;
