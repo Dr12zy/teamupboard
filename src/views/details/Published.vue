@@ -1,62 +1,54 @@
 <template>
   <div class="wrapper">
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3681275_qnuaci4wh9i.css">
-    <div class="top-left">
-      <div class="top-left__more">更多tag</div>
-    </div>
+
     <div class="DetailLeft">
+      <div class="top-left">
+      </div>
       <Rankings></Rankings>
     </div>
-    <div class="DetailTop">
-      <i class="iconfont icon-yonghu DetailTop__icon1"></i>
-      <i
-       class="iconfont icon-zhuye DetailTop__icon"
-       @click="handleHomeClick"
-      ></i>
-      <i
-       class="iconfont icon-tongzhi-copy DetailTop__icon"
-       @click="handleChatClick"
-      ></i>
-      <i
-       class="iconfont icon-shezhi DetailTop__icon"
-       @click="handleSettingsClick"
-      ></i>
-    </div>
+
     <div class="DetailRight">
       <div class="DetailRight__top">
-        <i class="iconfont icon-fanhui DetailRight__top__icon"></i>
-        <div class="DetailRight__top__font">自定义图片</div>
-      </div>
-      <div class="DetailRight__radius">
-        <img :src="selfInformation.img" alt="" class="DetailRight__radius__head">
-      </div>
-      <div class="DetailRight__self">
-        <div class="DetailRight__self__detail">
-          <div class="DetailRight__self__id">ID {{selfInformation.id}}</div>
-          <div class="DetailRight__self__introduction">简介：{{selfInformation.introduction}}</div>
+        <div>
+          <Nav></Nav>
         </div>
-        <div class="DetailRight__self__sex">{{selfInformation.sex}}</div>
-        <div
-         class="DetailRight__self__modify"
-         @click="handleSettingsClick"
-        >修改个人资料</div>
+        <div class="DetailRight__radius">
+          <img :src="selfInformation.img" alt="" class="DetailRight__radius__head">
+        </div>
+
+        <div class="DetailRight__self">
+            <span>ID {{selfInformation.id}}   {{selfInformation.sex}}</span>
+            <span>简介：{{selfInformation.introduction}}</span>
+
+          <el-button
+              class="DetailRight__self__modify"
+              @click="handleSettingsClick"
+          >修改个人资料</el-button>
+        </div>
       </div>
+
+
       <div class="DetailRight__select">
-        <div class="DetailRight__select__option">已发布 {{communication.release}}</div>
-        <div class="DetailRight__select__option">已申请 {{communication.apply}}</div>
-        <div class="DetailRight__select__option">已接收 {{communication.receive}}</div>
+        <el-button class="DetailRight__select__option">已发布 {{communication.release}}</el-button>
+        <el-button class="DetailRight__select__option">已申请 {{communication.apply}}</el-button>
+        <el-button class="DetailRight__select__option">已接收 {{communication.receive}}</el-button>
       </div>
+      <div class="DetailRightBottom">
       <div
        class="DetailRight__content"
        v-for="(item, index) in msgitems"
        :key="index"
       >
-        <!-- <div class="DetailRight__content__title">{{item.title}}</div>
-        <div class="DetailRight__content__context">{{item.context}}</div> -->
+
         <div class="DetailRight__content__item">
           <Msg :msgitems="item"></Msg>
         </div>
+        </div>
       </div>
+    </div>
+    <div class="Right">
+
     </div>
   </div>
 </template>
@@ -65,7 +57,7 @@
 import { defineComponent } from 'vue'
 import Rankings from '../../components/Rankings.vue';
 import { useRouter } from 'vue-router'
-
+import Nav from '../../components/Nav.vue';
 export default defineComponent({
   name: 'Published',
   setup () {
@@ -105,138 +97,138 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 14.44rem;
-  // bottom: 0;
-  background: #f1f1f1;
-}
-.top-left {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: #EFEFEF;
   display: flex;
-  &__more {
-    margin-top: .26rem;
-    margin-left: 3.3rem;
-    color: #999;
-  }
-}
-.DetailLeft {
-  position: absolute;
-  top: .29rem;
-  left: 0;
-  height: 11.55rem;
-  width: 4.5rem;
-  margin-top: .29rem;
-  margin-left: .29rem;
-  padding-top: .14rem;
-  padding-left: .14rem;
-  border: .01rem solid #555;
-  border-radius: .29rem;
-  // background: black;
-}
-.DetailTop {
-  position: absolute;
-  top: .2rem;
-  left: 6rem;
-  width: 6.93rem;
-  height: .8rem;
-  &__icon1 {
-    margin-left: .6rem;
-    font-size: .5rem;
-    color: #0091FF;
-  }
-  &__icon {
-    margin-left: 1.2rem;
-    font-size: .5rem;
-  }
-}
-.DetailRight {
-  position: absolute;
-  top: 1rem;
-  left: 6rem;
-  width: 6.93rem;
-  height: 11.55rem;
-  background: #999;
-  &__top {
-    width: 6.93rem;
-    height: 1.4rem;
-    background: #666;
-    &__icon {
-      position: absolute;
-      top: .14rem;
-      left: .14rem;
-      color: #fff;
-      font-size: .29rem;
+
+
+  .DetailLeft {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .top-left {
+      margin-top: -2rem;
+
+      &__more {
+        margin-top: .26rem;
+        margin-left: 3.3rem;
+        color: #999;
+      }
     }
-    &__font {
-      position: absolute;
-      top: .36rem;
-      left: 3rem;
-      font-size: .19rem;
-      color: #fff;
-    }
+
+
   }
-  &__radius {
-    position: absolute;
-    top: .84rem;
-    left: .65rem;
-    width: 1.08rem;
-    height: 1.08rem;
-    border-radius: .72rem;
-    background: #fff;
-    &__head {
-      height: 1.08rem;
-      width: 1.08rem;
+
+  .DetailRight {
+
+    width: 50%;
+    margin-left: .1rem;
+    padding-top: .2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: #EFEFEF;
+
+    &__top {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      width: 100%;
+      background-color: #EFEFEF;
+
+      &__font {
+        margin-left: 3%;
+        color: #fff;
+        font-size: 0.15rem;
+      }
+    }
+
+    &__radius {
+      margin: 10% 3% 2% 0;
       border-radius: .72rem;
+
+      &__head {
+        height: 1.08rem;
+        width: 1.08rem;
+        border-radius: .72rem;
+      }
+    }
+
+    &__self {
+      width: 100%;
+      display: flex;
+      font-size: 0.2rem;
+
+      &__sex {
+        margin-left: .2rem;
+      }
+
+      &__modify {
+        position: absolute;
+        margin-left: 40%;
+        line-height: .43rem;
+        font-size: .22rem;
+        text-align: center;
+        color: #fff;
+        background: #0091FF;
+        border-radius: .29rem;
+      }
+    }
+
+    &__select {
+      width: 100%;
+      margin: 3% auto;
+      display: flex;
+      //background: #0091FF;
+
+      &__option {
+        display: flex;
+        margin: 0 auto;
+        font-size: .22rem;
+
+        //color: #f8f8f8;
+        //background-color: #0091FF;
+      }
+    }
+
+    &__content {
+      margin: 2% auto;
+      width: 60%;
+      background: #fff;
+      border-radius: .43rem;
+
+      &__item {
+        padding-top: .2rem;
+        margin-left: .8rem;
+        font-size: .2rem;
+      }
+    }
+
+    .DetailRightBottom {
+      overflow-y: scroll;
+      overflow-x: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      height: 8rem;
+
     }
   }
-  &__self {
-    display: flex;
-    margin-top: .72rem;
-    margin-left: .29rem;
-    &__sex {
-      margin-left: .05rem;
-    }
-    &__modify {
-      position: absolute;
-      right: 1.44rem;
-      top: 1.59rem;
-      width: 1.66rem;
-      height: .43rem;
-      line-height: .43rem;
-      font-size: .22rem;
-      text-align: center;
-      color: #fff;
-      background: #0091FF;
-      border-radius: .29rem;
-    }
+  .Right {
+    width: 20%;
+    margin-right: -2rem;
   }
-  &__select {
-    display: flex;
-    margin-top: .14rem;
-    height: .55rem;
-    background: #0091FF;
-    &__option {
-      margin-left: 1.01rem;
-      margin-top: .12rem;
-      font-size: .22rem;
-      color: #f8f8f8;
-    }
-  }
-  &__content {
-    margin-top: .29rem;
-    margin-left: .43rem;
-    width: 6.06rem;
-    height: 2rem;
-    background: #fff;
-    border-radius: .43rem;
-    &__item {
-      padding-top: .2rem;
-      margin-left: .8rem;
-      font-size: .2rem;
-    }
-  }
+}
+::-webkit-scrollbar {
+  display: none;
 }
 </style>
