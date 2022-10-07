@@ -12,17 +12,20 @@
       </div>
     </div>
     <div class="ContainerMiddle">
+
       <div class="ContainerMiddleTop">
         <div class="MiddleT">
           <Nav></Nav>
         </div>
-        <div >
+
+        <div>
           <el-input
               v-model="input1"
               placeholder="Search"
               class="MiddleM"
               size="large"
               :suffix-icon="Search">
+              round
           </el-input>
 
         </div>
@@ -124,7 +127,7 @@ onMounted(() => {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  background-color: #EFEFEF;
+  background-color: #ffd464;
   display: flex;
 
   .ContainerLeft {
@@ -163,7 +166,6 @@ onMounted(() => {
       flex-direction: column;
       flex-wrap: nowrap;
       width: 100%;
-      background-color: #EFEFEF;
 
 
       .MiddleT{
@@ -182,14 +184,15 @@ onMounted(() => {
         display: flex;
         align-items: center;
         justify-content: center;
-
         button {
-          color: navy;
+          color: #F26964;
           //background-color: #DDDDDD;
           font-size: .2rem;
           border: none;
           //border-radius: 0.05rem;
           cursor: pointer;
+          background-color: #ffd464;
+
         }
 
         button {
@@ -220,10 +223,10 @@ onMounted(() => {
         height: 25%;
         margin: 0.2rem 0.5rem 0 0;
         padding: 0.1rem 0 0 0.1rem;
-        background-color: whitesmoke;
+        background-color: rgba(31, 87, 157, 0.87);
         box-sizing: border-box;
         border-radius: 0.2rem;
-        box-shadow: 0.03rem 0.03rem 0.05rem #002EA6;
+        box-shadow: 0.03rem 0.03rem 0.05rem #F26964;
 
       }
 

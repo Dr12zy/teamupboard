@@ -4,7 +4,6 @@
     <div class="Container">
         <div class="ContainerLeft">
             <div class="ContainerLeftTop">
-                <button>更多tag</button>
             </div>
             <div class="ContainerLeftBottom">
                 <Rankings></Rankings>
@@ -81,7 +80,7 @@ const form = reactive({
     overflow: hidden;
     width: 100%;
     height: 100%;
-    background-color: #FFE76F;
+    background-color: #ffd464;
     display: flex;
 
     .ContainerLeft {

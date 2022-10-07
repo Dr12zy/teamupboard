@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 <div class="DialogBottomRight">
-                    <button>Team UP!</button>
+                    <el-button circle>Team <br> Up!</el-button>
                 </div>
             </div>
         </el-dialog>
@@ -167,10 +167,11 @@ onMounted(() => {
                 justify-content: center;
                 align-items: center;
                 button{
-                    width: 70%;
-                    height: 70%;
-                    font-size: 30px;
-                    border-radius: 50%;
+                    background-color: #ffd464;
+                    width: 50%;
+                    height: 78%;
+                    font-size: 25px;
+                    //border-radius: 100%;
                 }
             }
         }
@@ -193,11 +194,12 @@ onMounted(() => {
             justify-content: center;
             margin-left: .1rem;
 
+
             .TopRightT {
                 display: flex;
 
                 h2 {
-                    color: #002EA6;
+                    color: #f4f4f2;
                 }
             }
 
@@ -206,6 +208,7 @@ onMounted(() => {
                 flex-direction: row;
 
                 p {
+                    color: #f4f4f2;
                     font-weight: bold;
                     margin-left: 10px;
                 }
@@ -221,6 +224,7 @@ onMounted(() => {
         justify-content: center;
 
         p {
+          color: #f4f4f2;
             font-family: 'Courier New', Courier, monospace;
         }
     }

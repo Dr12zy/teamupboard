@@ -106,7 +106,7 @@ export default defineComponent({
   overflow: hidden;
   width: 100%;
   height: 100%;
-  background-color: #EFEFEF;
+  background-color: #ffd464;
   display: flex;
 
 
@@ -137,14 +137,15 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    background-color: #EFEFEF;
+    background-color: #ffd464;
 
     &__top {
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
       width: 100%;
-      background-color: #EFEFEF;
+      background-color: #f4f4f2;
+      border-radius: 10% 10% 0 0;
 
       &__font {
         margin-left: 3%;
@@ -154,7 +155,8 @@ export default defineComponent({
     }
 
     &__radius {
-      margin: 10% 3% 2% 0;
+
+      margin: 10% 3% 2% 3%;
       border-radius: .72rem;
 
       &__head {
@@ -180,7 +182,7 @@ export default defineComponent({
         font-size: .22rem;
         text-align: center;
         color: #fff;
-        background: #0091FF;
+        background: #F26964;
         border-radius: .29rem;
       }
     }
@@ -189,13 +191,14 @@ export default defineComponent({
       width: 100%;
       margin: 3% auto;
       display: flex;
-      //background: #0091FF;
+      background: rgba(31, 87, 157, 0.87);
+      //height: 3%;
 
       &__option {
         display: flex;
         margin: 0 auto;
         font-size: .22rem;
-
+        background-color: #F26964;
         //color: #f8f8f8;
         //background-color: #0091FF;
       }
@@ -204,17 +207,18 @@ export default defineComponent({
     &__content {
       margin: 2% auto;
       width: 60%;
-      background: #fff;
+      background: rgba(31, 87, 157, 0.87);
       border-radius: .43rem;
 
       &__item {
-        padding-top: .2rem;
+        padding-top: .1rem;
         margin-left: .8rem;
         font-size: .2rem;
       }
     }
 
     .DetailRightBottom {
+      background-color: #ffd464;
       overflow-y: scroll;
       overflow-x: hidden;
       display: flex;

@@ -57,8 +57,8 @@
                             <el-input v-model="form.tag" />
                         </el-form-item>
                         <el-form-item>
-                            <el-button type="primary" @click="AddTask()">添加</el-button>
-                            <el-button @click="TaskItem = false">取消</el-button>
+                            <el-button @click="AddTask()">添加</el-button>
+                            <el-button @click="TaskItem = false" >取消</el-button>
                         </el-form-item>
                     </el-form>
             </div>
@@ -109,15 +109,17 @@ const AddTask = () => {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    background-color: white;
+    border-radius: 1rem;
     button{
         margin-left: .6rem;
         margin-right: .6rem;
         // font-size: 40px;
         border: none;
-        background-color: #FFE76F;
+        background-color: white;
         cursor: pointer;
         i{
-            color: #002EA6;
+            color: #F26964;
             font-size: .6rem;
         }
     }
