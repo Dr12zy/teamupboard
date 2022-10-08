@@ -1,5 +1,13 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import './style/base.scss';
+import router from './router';
 
-createApp(App).mount('#app')
+router.beforeEach((to, from, next) => {
+  if (to.meta.title) {
+    document.title = to.meta.title;
+  }
+  next();
+});
+
+createApp(App).use(router).mount('#app');
